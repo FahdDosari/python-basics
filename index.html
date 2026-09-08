@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أساسيات بايثون</title>
+    <style>
+        /* CSS خط ضروري للتجاوب وتأثيرات الماوس فقط */
+        body { margin: 0; padding: 0; font-family: Calibri, sans-serif; display: flex; background-color: #fcfcfc; }
+        .sidebar-link:hover, .sidebar-link.active { background-color: #e0e7ff; color: #1d4ed8; font-weight: bold; }
+        .page-lesson { display: none; }
+        .page-lesson.active { display: block; }
+        
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            #sidebar { width: 100% !important; border-left: none !important; border-bottom: 1px solid #e0e0e0; }
+            #main-content { padding: 20px !important; }
+        }
+    </style>
+</head>
+<!-- نضمن في بداية body أن الارتفاع يغطي الشاشة بالكامل -->
+<body style="margin: 0; padding: 0; display: flex; min-height: 100vh; background-color: #f8f9fa;">
+	
+	<nav id="sidebar" style="width: 100px; background-color: #000000; border-left: 1px solid #e0e0e0; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
+        
+    </nav>
+    <!-- القائمة الجانبية بطول الصفحة الكامل -->
+    <nav id="sidebar" style="width: 250px; background-color: #e2e8f0; border-left: 1px solid #e0e0e0; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
+        <h2 style="font-size: 22px; margin-top: 45px; margin-bottom: 20px; color: #111111;">أساسيات بايثون</h2>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link active" onclick="showLesson('intro', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🚀</span>المقدمة وبيئة العمل</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('output', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🖥️</span>أمر الإخراج</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('variables', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">📦</span>المتغيرات</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('operators', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">➕</span>العوامل</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('lists', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">📋</span>القوائم</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('strings', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🔤</span>النصوص</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('conditions', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🔀</span>الشروط</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('loops', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🔄</span>حلقات التكرار</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('functions', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">⚙️</span>الدوال</a></li>
+            <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link" onclick="showLesson('input', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">⌨️</span>أمر الإدخال</a></li>
+        </ul>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main id="main-content" style="flex-grow: 1; padding: 40px; max-width: 900px;">
+
+        <!-- 1. المقدمة وبيئة العمل -->
+        <section id="intro" class="page-lesson active">
+            <h1 style="font-size: 26px; margin-bottom: 15px; margin-top: 50px; color: #000000; text-align: right;">مقدمة</h1>
+            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 15px; color: #000000; text-align: right;">
+                هناك لغات برمجة عديدة، ولكننا سنختار لغة بايثون لنشرحها نظراً لسهولتها الكبيرة وقربها من اللغة الإنجليزية العادية.<br>
+                وقبل أن نبدأ لا بد أن نعرف معنى البرمجة!!<br>
+                البرمجة بكل بساطة هي إعطاء أوامر للحاسوب.
+            </p>
+
+            <h2 style="font-size: 26px; margin-top: 80px; margin-bottom: 15px; color: #000000; text-align: right;">بيئة العمل</h2>
+            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 15px; color: #000000; text-align: right;">
+    بيئة العمل هي المكان الذي سنكتب فيه الأوامر للحاسوب، ويسمى محرر.<br>
+    وسنستخدم محرر أونلاين والمحررات الأونلاين هي مواقع تتيح لك كتابة وتشغيل الكود مباشرة عبر المتصفح دون الحاجة لتحميل أي برامج على جهازك.<br>
+    ومن أفضل هذه المحررات هو محرر Programiz وتجدونه عبر هذا الرابط:
+			</p>
+            <p style="text-align: right;">
+                <a href="https://www.programiz.com/python-programming/online-compiler" target="_blank" style="font-size: 16px; color: #000000; text-decoration: underline;">www.programiz.com/python-programming/online-compiler</a>
+            </p>
+        </section>
+
+		<!-- 2. أمر الإخراج -->
+        <section id="output" class="page-lesson">
+            <h1 style="font-size: 26px; margin-bottom: 25px; margin-top: 50px; color: #000000; text-align: right;">أمر الإخراج</h1>
+            
+            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp;  أمر الإخراج هو أن نأمر الحاسوب بأن يُخرج أو يطبع على الشاشة ما نريد باستخدام الأمر print.</p>
+
+            <!-- تم إضافة margin-right: 20px لإزاحة المثال وصندوق الكود -->
+            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
+			 &nbsp;في هذا المثال سنأمر الحاسوب بأن يُخرج الرقم 6.
+
+            <div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000;">print(6)</div>
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left;">6</div>
+            </div>
+
+            <p style="font-size: 16px; line-height: 1.7; margin-top: 45px; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp;  لو أردنا إخراج أكثر من شيء فإننا نضع فاصلة بين كل قيمتين</p>
+
+            <!-- إزاحة المثال الثاني وصندوقه بنفس المقدار -->
+            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 2</mark>
+			&nbsp;في هذا المثال سنأمر الحاسوب بأن يُخرج الرقم 9 و 2.
+
+            
+            <div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000;">print(9, 2)</div>
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left;">9 2</div>
+            </div>
+
+			<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
+            <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">اكتب برنامجاً يُخرج الرقم 22.</p>
+			
+            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 2px; margin-bottom: 1px;">تمرين 2</mark>
+            <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">اكتب برنامجاً يُخرج الأرقام 4 و 25 و 7.</p>
+        </section>
+
+        <!-- بقية الدروس -->
+        <section id="variables" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">المتغيرات</h1></section>
+        <section id="operators" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">العوامل</h1></section>
+        <section id="lists" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">القوائم</h1></section>
+        <section id="strings" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">النصوص</h1></section>
+        <section id="conditions" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">الشروط</h1></section>
+        <section id="loops" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">حلقات التكرار</h1></section>
+        <section id="functions" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">الدوال</h1></section>
+        <section id="input" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">أمر الإدخال</h1></section>
+
+    </main>
+
+    <!-- JavaScript للتنقل -->
+    <script>
+        function showLesson(lessonId, element) {
+            const lessons = document.querySelectorAll('.page-lesson');
+            lessons.forEach(lesson => lesson.classList.remove('active'));
+
+            const links = document.querySelectorAll('.sidebar-link');
+            links.forEach(link => link.classList.remove('active'));
+
+            document.getElementById(lessonId).classList.add('active');
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>

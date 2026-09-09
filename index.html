@@ -13,19 +13,20 @@
         
         @media (max-width: 768px) {
             body { flex-direction: column; }
-            #sidebar { width: 100% !important; border-left: none !important; border-bottom: 1px solid #e0e0e0; }
+            #sidebar-right, #sidebar-left { width: 100% !important; border-left: none !important; border-right: none !important; border-bottom: 1px solid #e0e0e0; }
             #main-content { padding: 20px !important; }
         }
     </style>
 </head>
 <!-- نضمن في بداية body أن الارتفاع يغطي الشاشة بالكامل -->
 <body style="margin: 0; padding: 0; display: flex; min-height: 100vh; background-color: #f8f9fa;">
-	
+
 	<nav id="sidebar" style="width: 100px; background-color: #000000; border-left: 1px solid #e0e0e0; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
         
     </nav>
-    <!-- القائمة الجانبية بطول الصفحة الكامل -->
-    <nav id="sidebar" style="width: 250px; background-color: #e2e8f0; border-left: 1px solid #e0e0e0; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
+	
+    <!-- القائمة الجانبية اليمنى (الدروس) -->
+    <nav id="sidebar-right" style="width: 250px; background-color: #e2e8f0; border-left: 1px solid #e0e0e0; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
         <h2 style="font-size: 22px; margin-top: 45px; margin-bottom: 20px; color: #111111;">أساسيات بايثون</h2>
         <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin-bottom: 2px;"><a href="#" class="sidebar-link active" onclick="showLesson('intro', this)" style="display: block; padding: 4px 10px; color: #333333; text-decoration: none; border-radius: 4px; font-size: 17px;"><span style="margin-left: 6px;">🚀</span>المقدمة وبيئة العمل</a></li>
@@ -70,7 +71,6 @@
             
             <p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp;  أمر الإخراج هو أن نأمر الحاسوب بأن يُخرج أو يطبع على الشاشة ما نريد باستخدام الأمر print.</p>
 
-            <!-- تم إضافة margin-right: 20px لإزاحة المثال وصندوق الكود -->
             <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
 			 &nbsp;في هذا المثال سنأمر الحاسوب بأن يُخرج الرقم 6.
 
@@ -81,11 +81,9 @@
 
             <p style="font-size: 16px; line-height: 1.7; margin-top: 45px; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp;  لو أردنا إخراج أكثر من شيء فإننا نضع فاصلة بين كل قيمتين</p>
 
-            <!-- إزاحة المثال الثاني وصندوقه بنفس المقدار -->
             <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 2</mark>
 			&nbsp;في هذا المثال سنأمر الحاسوب بأن يُخرج الرقم 9 و 2.
 
-            
             <div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
                 <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000;">print(9, 2)</div>
                 <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left;">9 2</div>
@@ -98,8 +96,39 @@
             <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">اكتب برنامجاً يُخرج الأرقام 4 و 25 و 7.</p>
         </section>
 
+		<!-- 3. المتغيرات -->
+        <section id="variables" class="page-lesson">
+            <h1 style="font-size: 26px; margin-bottom: 25px; color: #000000; text-align: right;">المتغيرات Variables</h1>
+            
+            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp; المتغير هو شيء يتم إنشاؤه ثم يُوضع فيه عدد معين.</p>
+
+            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
+            &nbsp;في هذا المثال سنُنشئ متغير اسمه x ونضع فيه العدد 9 ثم سنطبع قيمة x.
+
+            <div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre;">x = 9
+print(x)</div>
+                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left;">9</div>
+            </div>
+
+            <p style="font-size: 16px; line-height: 1.7; margin-top: 30px; margin-bottom: 8px; color: #000000; text-align: right;">
+                ▪&nbsp; <span style="font-weight: bold;">تسمية المتغيرات</span><br>
+                نسمي المتغيرات بأي اسم نريده من الحروف الإنجليزية سواء حرف كبير أو صغير والأرقام وعلامة أندرسكور (التي هي الشرطة التحتية <code style="font-family: Consolas, monospace; background-color: #e0e0e0; padding: 2px 5px; border-radius: 3px;">_</code>) فقط. ويُشترط أن لا نبدأ برقم.<br>
+                مثل: <code style="font-family: Consolas, monospace; dir: ltr;">x</code>, <code style="font-family: Consolas, monospace; dir: ltr;">a</code>, <code style="font-family: Consolas, monospace; dir: ltr;">x1</code>, <code style="font-family: Consolas, monospace; dir: ltr;">f_number</code>، وهكذا.
+            </p>
+
+            <div style="margin-top: 15px; margin-bottom: 8px; text-align: right;">
+                <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block;">ملاحظة للتأكيد</mark>
+                <p style="font-size: 16px; line-height: 1.7; margin-top: 5px; color: #000000;">
+                    لا يمكن استخدام الرموز في تسمية المتغيرات إلا رمز الشرطة التحتية فقط.
+                </p>
+            </div>
+
+            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
+            <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ متغير اسمه n ثم ضع فيه العدد 10 ثم اطبع المتغير.</p>
+        </section>
+		
         <!-- بقية الدروس -->
-        <section id="variables" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">المتغيرات</h1></section>
         <section id="operators" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">العوامل</h1></section>
         <section id="lists" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">القوائم</h1></section>
         <section id="strings" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">النصوص</h1></section>
@@ -109,6 +138,11 @@
         <section id="input" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">أمر الإدخال</h1></section>
 
     </main>
+
+    <!-- القائمة الجانبية اليسرى (الجديدة - فارغة وسوداء) -->
+    <nav id="sidebar-left" style="width: 150px; background-color: #58FA82; border-right: 0px solid #333333; padding: 20px 15px; flex-shrink: 0; min-height: 100vh; box-sizing: border-box;">
+        
+    </nav>
 
     <!-- JavaScript للتنقل -->
     <script>

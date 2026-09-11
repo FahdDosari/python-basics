@@ -96,42 +96,126 @@
             <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">اكتب برنامجاً يُخرج الأرقام 4 و 25 و 7.</p>
         </section>
 
+
 		<!-- 3. المتغيرات -->
-        <section id="variables" class="page-lesson">
-            <h1 style="font-size: 26px; margin-bottom: 25px; color: #000000; text-align: right;">المتغيرات Variables</h1>
-            
-            <p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp; المتغير هو شيء يتم إنشاؤه ثم يُوضع فيه عدد معين.</p>
+		<section id="variables" class="page-lesson">
+			<h1 style="font-size: 26px; margin-bottom: 25px; color: #000000; text-align: right;">المتغيرات Variables</h1>
+			
+			<p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp; المتغير هو شيء يتم إنشاؤه ثم يُوضع فيه عدد معين.</p>
 
-            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
-            &nbsp;في هذا المثال سنُنشئ متغير اسمه x ونضع فيه العدد 9 ثم سنطبع قيمة x.
+			<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
+			&nbsp;في هذا المثال سنُنشئ متغير اسمه x ونضع فيه العدد 9 ثم سنطبع قيمة x.
 
-            <div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
-                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre;">x = 9
-print(x)</div>
-                <div style="width: 50%; padding: 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left;">9</div>
-            </div>
+			<div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+				<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre; line-height: 1.3;">x = 9<br>print(x)</div>
+				<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; line-height: 1.3;">9</div>
+			</div>
 
-            <p style="font-size: 16px; line-height: 1.7; margin-top: 30px; margin-bottom: 8px; color: #000000; text-align: right;">
-                ▪&nbsp; <span style="font-weight: bold;">تسمية المتغيرات</span><br>
-                نسمي المتغيرات بأي اسم نريده من الحروف الإنجليزية سواء حرف كبير أو صغير والأرقام وعلامة أندرسكور (التي هي الشرطة التحتية <code style="font-family: Consolas, monospace; background-color: #e0e0e0; padding: 2px 5px; border-radius: 3px;">_</code>) فقط. ويُشترط أن لا نبدأ برقم.<br>
-                مثل: <code style="font-family: Consolas, monospace; dir: ltr;">x</code>, <code style="font-family: Consolas, monospace; dir: ltr;">a</code>, <code style="font-family: Consolas, monospace; dir: ltr;">x1</code>, <code style="font-family: Consolas, monospace; dir: ltr;">f_number</code>، وهكذا.
-            </p>
+			<p style="font-size: 16px; line-height: 1.7; margin-top: 30px; margin-bottom: 4px; color: #000000; text-align: right;">
+			▪&nbsp; <strong>تسمية المتغيرات</strong>
+			</p>
+			<p style="font-size: 16px; line-height: 1.7; margin-top: 0; margin-bottom: 8px; margin-right: 13px; color: #000000; text-align: right;">
+				نسمي المتغيرات بأي اسم نريده من الحروف الإنجليزية سواء حرف كبير أو صغير والأرقام وعلامة أندرسكور (التي هي الشرطة التحتية _) فقط. ويُشترط أن لا نبدأ برقم.<br>
+				مثل: x, a, x1, f_number، وهكذا.
+			</p>
 
-            <div style="margin-top: 15px; margin-bottom: 8px; text-align: right;">
-                <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block;">ملاحظة للتأكيد</mark>
-                <p style="font-size: 16px; line-height: 1.7; margin-top: 5px; color: #000000;">
-                    لا يمكن استخدام الرموز في تسمية المتغيرات إلا رمز الشرطة التحتية فقط.
-                </p>
-            </div>
+			<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 15px; margin-right: 13px;">ملاحظة للتأكيد</mark>
+			<p style="font-size: 16px; line-height: 1.7; margin-top: 5px; margin-bottom: 8px; color: #000000; text-align: right; margin-right: 13px;">
+				لا يمكن استخدام الرموز في تسمية المتغيرات إلا رمز الشرطة التحتية فقط.
+			</p>
 
-            <mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
-            <p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ متغير اسمه n ثم ضع فيه العدد 10 ثم اطبع المتغير.</p>
-        </section>
+			<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
+			<p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ متغير اسمه n ثم ضع فيه العدد 10 ثم اطبع المتغير.</p>
+		</section>
 		
         <!-- بقية الدروس -->
         <section id="operators" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">العوامل</h1></section>
-        <section id="lists" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">القوائم</h1></section>
-        <section id="strings" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">النصوص</h1></section>
+<!-- القوائم -->
+<section id="lists" class="page-lesson">
+	<h1 style="font-size: 26px; margin-bottom: 25px; color: #000000; text-align: right;">القوائم Lists</h1>
+	
+	<p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp; القوائم جمع قائمة، والقائمة في لغة بايثون هي شيء نضع فيه عدة أرقام.</p>
+
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
+	&nbsp;في هذا المثال سنُنشئ قائمة اسمها x ونضع فيها عدة أرقام ثم سنطبع القائمة.
+
+	<div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre; line-height: 1.3;">x = [4, 99, 10, 5]<br>print(x)</div>
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; line-height: 1.3;">[4, 99, 10, 5]</div>
+	</div>
+
+	
+
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 30px; margin-bottom: 4px; color: #000000; text-align: right;">
+	▪&nbsp; <strong>طباعة عنصر محدد من القائمة</strong>
+	</p>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 0; margin-bottom: 8px; margin-right: 13px; color: #000000; text-align: right;">
+		يمكن طباعة عنصر واحد فقط أو اثنين أو حسب ما نريد من القائمة كالتالي:
+	</p>
+
+	<div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre; line-height: 1.3;">x = [4, 99, 1000, 5]<br>print(x[0])<br>print(x[2])<br>print(x[1])</div>
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; line-height: 1.3;">4<br>1000<br>99</div>
+	</div>
+
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 15px; margin-right: 13px;">ملاحظة للتأكيد</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 5px; margin-bottom: 8px; color: #000000; text-align: right; margin-right: 13px;">
+		العد يبدأ من صفر وليس من واحد.<br>
+		x[0] : تعني العنصر الأول من القائمة x<br>
+		x[1] : تعني العنصر الثاني من القائمة x<br>
+		x[2] : تعني العنصر الثالث من القائمة x<br>
+		وهكذا.
+	</p>
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ قائمة اسمها n ثم ضع فيها عدة أرقام ثم اطبعها.</p>
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 4px; margin-bottom: 1px;">تمرين 2</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ قائمة اسمها n ثم ضع فيها خمس قيم ثم اطبع العنصر الثاني والخامس فقط.</p>
+</section>
+
+<!-- النصوص -->
+<section id="strings" class="page-lesson">
+	<h1 style="font-size: 26px; margin-bottom: 25px; color: #000000; text-align: right;">النصوص Strings</h1>
+	
+	<p style="font-size: 16px; line-height: 1.7; margin-bottom: 8px; color: #000000; text-align: right;">▪&nbsp; النص في لغة بايثون هو تسلسل من الحروف نضعه بين علامات تنصيص.</p>
+
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-bottom: 11px; margin-right: 13px;">مثال 1</mark>
+	&nbsp;في هذا المثال سنُنشئ متغير نصي اسمه x ونضع فيه النص "Welcome Fahd" ثم سنطبع قيمته.
+
+	<div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre; line-height: 1.3;">x = "Welcome Fahd"<br>print(x)</div>
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; line-height: 1.3;">Welcome Fahd</div>
+	</div>
+
+
+
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 30px; margin-bottom: 4px; color: #000000; text-align: right;">
+	▪&nbsp; <strong>طباعة حرف محدد من النص</strong>
+	</p>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 0; margin-bottom: 8px; margin-right: 13px; color: #000000; text-align: right;">
+		يمكن طباعة حرف واحد فقط أو أكثر من النص تماماً مثل القوائم كالتالي:
+	</p>
+
+	<div style="display: flex; direction: ltr; background-color: #81F7F3; border: 1px solid #000000; border-radius: 6px; margin: 1px 0 2px 20px; max-width: 630px; overflow: hidden; margin-right: 13px;">
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; border-right: 1px solid #000000; white-space: pre; line-height: 1.3;">x = "Welcome Fahd"<br>print(x[0])<br>print(x[3])<br>print(x[8])</div>
+		<div style="width: 50%; padding: 4px 12px; font-family: Consolas, monospace; font-size: 15px; text-align: left; line-height: 1.3;">W<br>c<br>F</div>
+	</div>
+
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 15px; margin-right: 13px;">ملاحظة للتأكيد</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 5px; margin-bottom: 8px; color: #000000; text-align: right; margin-right: 13px;">
+		العد يبدأ من صفر وليس من واحد، والمسافة تُحسب كحرف أيضاً.<br>
+		x[0] : تعني الحرف الأول من النص x<br>
+		x[1] : تعني الحرف الثاني من النص x<br>
+		x[2] : تعني الحرف الثالث من النص x<br>
+		وهكذا.
+	</p>
+
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 40px; margin-bottom: 1px;">تمرين 1</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ متغير اسمه s ثم ضع فيه نصاً من اختيارك ثم اطبع المتغير.</p>
+	<mark style="background-color: #FFFF00; font-size: 16px; padding: 2px 8px; border-radius: 3px; font-weight: bold; color: #000000; display: inline-block; margin-top: 4px; margin-bottom: 1px;">تمرين 2</mark>
+	<p style="font-size: 16px; line-height: 1.7; margin-top: 2px; color: #000000; text-align: right;">أنشئ متغير اسمه msg ونضع فيه النص "Welcome Fahd" ثم اطبع الحرف الأول والحرف الأخير فقط.</p>
+</section>
+
+
         <section id="conditions" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">الشروط</h1></section>
         <section id="loops" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">حلقات التكرار</h1></section>
         <section id="functions" class="page-lesson"><h1 style="font-size: 28px; text-align: right;">الدوال</h1></section>
